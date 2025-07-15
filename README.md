@@ -1,2 +1,1 @@
-# counter-state-app
-Counter State [Projct 2 (FS Mono)]
+# Counter State [Projct 2 (FS Mono)]
