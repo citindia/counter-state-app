@@ -16,6 +16,7 @@ const Header = () => {
 					<Link href={"/"}>Basic</Link>
 					<Link href={"/advanced"}>Advanced</Link>
 					<Link href={"/expert"}>Expert</Link>
+					<Link href={"/atomic"}>Atomic</Link>
 
 					<ThemeToggleButton />
 				</nav>
