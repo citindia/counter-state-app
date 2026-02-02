@@ -1,28 +1,31 @@
 import Link from "next/link";
-import ThemeToggleButton from "../customui/ThemeToggleButton";
-import { AuroraText } from "../magicui/aurora-text";
+import ThemeToggleButton from "../ThemeToggleButton";
 
 const Header = () => {
-	return (
-		<header className="border-b shadow">
-			<div className="container mx-auto flex items-center justify-between px-6 py-3">
-				<Link href={"/"}>
-					<AuroraText className="text-2xl font-semibold">
-						Counter State App
-					</AuroraText>
-				</Link>
+  return (
+    <header
+      className="fixed right-0 left-0 border-b shadow"
+      aria-label="app-header">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+        <Link href={"/"}>
+          <h1
+            className="text-2xl font-semibold"
+            aria-label="App Name">
+            Counter State App
+          </h1>
+        </Link>
 
-				<nav className="flex items-center gap-4">
-					<Link href={"/"}>Basic</Link>
-					<Link href={"/advanced"}>Advanced</Link>
-					<Link href={"/expert"}>Expert</Link>
-					<Link href={"/atomic"}>Atomic</Link>
+        <nav className="flex items-center gap-4">
+          <Link href={"/"}>Basic</Link>
+          <Link href={"/advanced"}>Advanced</Link>
+          <Link href={"/expert"}>Expert</Link>
+          <Link href={"/atomic"}>Atomic</Link>
 
-					<ThemeToggleButton />
-				</nav>
-			</div>
-		</header>
-	);
+          <ThemeToggleButton />
+        </nav>
+      </div>
+    </header>
+  );
 };
 
 export default Header;

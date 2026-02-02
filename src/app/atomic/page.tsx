@@ -1,38 +1,36 @@
-import GlobalCounter from "@/components/GlobalCounter";
 import GlobalCounterButtons from "@/components/GlobalCounterButtons";
+import GlobalCounterText from "@/components/GlobalCounterText";
 import {
-	Card,
-	CardContent,
-	CardHeader,
-	CardTitle,
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
 } from "@/components/shadcnui/card";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Atomic | Counter State App",
-	description: "Atomic Counter State App",
+  title: "Atomic | Counter State App",
+  description: "Atomic Counter State App",
 };
 
-const page = () => {
-	return (
-		<section className="grid h-[80dvh] place-items-center">
-			<Card className="w-xs">
-				<CardHeader>
-					<CardTitle className="grid place-items-center text-2xl">
-						Atomic Counter App
-					</CardTitle>
-				</CardHeader>
+const page = async () => {
+  return (
+    <section className="grid h-[90dvh] place-items-center">
+      <Card className="w-xs">
+        <CardHeader>
+          <CardTitle className="grid place-items-center text-2xl">
+            Atomic Counter App
+          </CardTitle>
+        </CardHeader>
 
-				<CardContent>
-					<div className="space-y-8">
-						<GlobalCounter />
+        <CardContent className="space-y-6">
+          <GlobalCounterText />
 
-						<GlobalCounterButtons />
-					</div>
-				</CardContent>
-			</Card>
-		</section>
-	);
+          <GlobalCounterButtons />
+        </CardContent>
+      </Card>
+    </section>
+  );
 };
 
 export default page;
