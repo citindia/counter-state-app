@@ -1,4 +1,4 @@
-import BasicCounter from "@/components/BasicCounter";
+import AdvancedCounter from "@/components/AdvancedCounter";
 import {
   Card,
   CardContent,
@@ -8,22 +8,22 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Basic | Counter State App",
-  description: "Basic Counter State App",
+  title: "Advanced | Counter State App",
+  description: "Advanced Counter State App",
 };
 
-const page = async () => {
+const page = () => {
   return (
     <section className="grid h-[90dvh] place-items-center">
       <Card className="w-xs">
         <CardHeader>
           <CardTitle className="grid place-items-center text-2xl">
-            Basic Counter App
+            Advanced Counter App
           </CardTitle>
         </CardHeader>
 
         <CardContent className="space-y-6">
-          <BasicCounter />
+          <AdvancedCounter />
         </CardContent>
       </Card>
     </section>
